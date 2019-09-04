@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Prestation } from 'src/app/shared/models/prestation';
+import { fakeCollection } from './fake-collection';
 
 @Injectable({ // decorator pour montrer que c'est un SVC
   providedIn: 'root' // Depuis Ang6 : plus besoin de le dec in providers dans AppRoot, inst des le demm de root
@@ -7,11 +9,26 @@ import { Injectable } from '@angular/core';
 
 export class PrestationsService {
 
-  constructor() { }
+  private pCollection: Prestation[]; // Attribut pCollection de type Tab[] de Prestation
+
+
+
+ // Constructeur
+  constructor() {
+    this.collection = fakeCollection;
+
+  }
 
 // get Collection
+get collection(): Prestation[]{
+  return this.pCollection;
+}
 
 // set Collection
+set collection(col: Prestation[]){
+  this.pCollection = col;
+}
+
 
 // update item in Collection
 

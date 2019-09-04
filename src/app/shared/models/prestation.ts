@@ -21,6 +21,7 @@ export class Prestation implements PrestationI{ // ajout implements PrestationI
   }
 
   totalHt(): number {
+    console.log('TOTAL HT CALLED');
     // init : throw new Error("Method not implemented.");
     return this.tjmHt * this.nbJours;
   }
@@ -28,6 +29,7 @@ export class Prestation implements PrestationI{ // ajout implements PrestationI
 
   totalTtc(tva?: number): number {
     // init :  throw new Error("Method not implemented.");
+    console.log('TOTAL TTC CALLED');
     if (tva) {
       if (tva <= 0) {
         return this.totalHt();
