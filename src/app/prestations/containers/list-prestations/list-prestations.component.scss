@@ -1,0 +1,6 @@
+@import '~src/variables';
+
+app-item-prestation{
+  display: contents; // Le navig doit le considere comme ne faisant pas partie du DOM
+}
+

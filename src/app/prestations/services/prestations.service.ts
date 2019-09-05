@@ -9,6 +9,7 @@ import { fakeCollection } from './fake-collection';
 
 export class PrestationsService {
 
+
   private pCollection: Prestation[]; // Attribut pCollection de type Tab[] de Prestation
 
 
@@ -29,8 +30,12 @@ set collection(col: Prestation[]){
   this.pCollection = col;
 }
 
-
 // update item in Collection
+public update(item, state) {
+   console.log(item);
+   item.state = state;
+   console.log(item);
+ }
 
 // add item in Collection
 

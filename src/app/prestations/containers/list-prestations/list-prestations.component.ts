@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { PrestationsService } from '../../services/prestations.service';
+// Suppr  import { State } from 'src/app/shared/enums/state.enum';
 
 
 
@@ -37,5 +38,9 @@ export class ListPrestationsComponent implements OnInit { // implements nom_itf
   this.collection = this.prestationsService.collection;
 
   }
+
+
+
+
 
 }
